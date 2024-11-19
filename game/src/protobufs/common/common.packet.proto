@@ -4,10 +4,9 @@ package common;
 
 message GamePacket {
   oneof payload {
-    S2C_ConnectResponse connectResponse = 1;
-    S2C_MoveNotification moveNotification = 2;
-    C2S_ConnectGameRequest connectGameRequest = 3;
-    S2C_ConnectGameNotification connectGameNotification = 4;
-    S2C_ConnectNotification connectNotification = 5;
+    S2C_MoveNotification moveNotification = 1;
+    C2S_ConnectGameRequest connectGameRequest = 2;
+    S2C_ConnectResponse connectResponse = 3;
+    S2C_ConnectNotification connectNotification = 4;
   }
 }

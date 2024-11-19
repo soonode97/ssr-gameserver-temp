@@ -14,6 +14,6 @@ message S2C_ConnectGameNotification {
   string message = 4;
 }
 
-message S2C_ConnectNotification {
+message S2C_ConnectResponse {
   string token = 1;
 }

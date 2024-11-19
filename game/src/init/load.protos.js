@@ -39,12 +39,14 @@ export const loadProtos = async () => {
     await Promise.all(protoFiles.map((file) => root.load(file)));
 
     for (const [packageName, types] of Object.entries(packetNames)) {
-      // console.log(packageName, types);
+      console.log(packageName, types);
       protoMessages[packageName] = {};
       for (const [type, typeName] of Object.entries(types)) {
         protoMessages[packageName][type] = root.lookupType(typeName);
       }
     }
+
+    console.log(protoMessages);
 
     console.log('Protobuf 파일 로드 완료');
   } catch (e) {

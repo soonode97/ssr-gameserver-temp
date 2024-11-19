@@ -5,9 +5,9 @@ export const packetNames = {
     GamePacket: 'common.GamePacket',
   },
   auth: {
+    S2C_ConnectResponse: 'auth.S2C_ConnectResponse',
     C2S_ConnectGameRequest: 'auth.C2S_ConnectGameRequest',
     S2C_ConnectGameNotification: 'auth.S2C_ConnectGameNotification',
-    S2C_ConnectNotification: 'auth.S2C_ConnectNotification',
   },
   gameData: {
     Position: 'gameData.Position',
