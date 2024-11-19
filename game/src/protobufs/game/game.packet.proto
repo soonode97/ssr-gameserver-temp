@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package gameData;
+
+message Position {
+  float x = 1;
+  float y = 2;
+  float z = 3;
+}
+
+message Player {
+  uint32 playerId = 1;
+  Position position = 2;
+}
+
+message Ghost {
+  uint32 ghostId = 1;
+  Position position = 2;
+}
+
+message LocationUpdate {
+  repeated GhostLocationData ghostLocations = 1;
+  repeated PlayerLocationData playerLocations = 2;
+}
+
+message GhostLocationData {
+  uint32 ghostId = 1;
+  Position position = 2;
+}
+
+message PlayerLocationData {
+  uint32 playerId = 1;
+  Position position = 2;
+}
+
+message InitGameData {
+  repeated Ghost ghosts = 1;
+  repeated Player players = 2;
+  uint32 mapId = 3;
+}
+
+message C2S_MoveRequest {
+  uint32 playerId = 1;
+  Position position = 2;
+}
+
+message S2C_MoveNotification {
+  LocationUpdate locationUpdate = 2;
+}
