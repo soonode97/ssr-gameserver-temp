@@ -1,4 +1,4 @@
-import { PACKET_TYPE } from '../../constants/haeader.js';
+import { PACKET_TYPE } from '../constants/header.js';
 import { connectGameRequestHandler } from './auth/auth.handler.js';
 import { moveRequestHandler } from './game/game.handler.js';
 

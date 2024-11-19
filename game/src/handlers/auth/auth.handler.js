@@ -1,8 +1,7 @@
-import { config } from '../../../config/config.js';
-import { PACKET_TYPE } from '../../../constants/haeader.js';
-import { getGameSession } from '../../../sessions/game.session.js';
-import { addUser } from '../../../sessions/userSessions.js';
-import { serializer } from '../../../utils/packet/create.packet.js';
+import { config } from '../../config/config.js';
+import { PACKET_TYPE } from '../../constants/header.js';
+import { addUser } from '../../sessions/userSessions.js';
+import { serializer } from '../../utils/packet/create.packet.js';
 
 export const connectGameRequestHandler = ({ socket, payload }) => {
   try {

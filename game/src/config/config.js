@@ -13,7 +13,7 @@ import {
   PAYLOAD_LENGTH,
   SEQUENCE_LENGTH,
   VERSION_LENGTH,
-} from '../constants/haeader.js';
+} from '../constants/header.js';
 
 export const config = {
   server: {

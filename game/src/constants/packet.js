@@ -1,4 +1,4 @@
-import { PACKET_TYPE } from './haeader.js';
+import { PACKET_TYPE } from './header.js';
 
 export const packetNames = {
   common: {

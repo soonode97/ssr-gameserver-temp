@@ -1,5 +1,5 @@
 import { config } from '../config/config.js';
-import { PACKET_TYPE } from '../constants/haeader.js';
+import { PACKET_TYPE } from '../constants/header.js';
 import { serializer } from '../utils/packet/create.packet.js';
 import { onData } from './onData.js';
 import { onEnd } from './onEnd.js';
