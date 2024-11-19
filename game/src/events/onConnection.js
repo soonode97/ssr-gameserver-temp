@@ -16,7 +16,12 @@ export const onConnection = (socket) => {
 
   // 현재는 테스트용도 연결된 클라이언트에게 토큰 넘겨주고 나중엔 로그인 시에 jwt토큰을 생성하여 클라에게 넘겨주고 서버 및 세션에 참가할떄 인증검증으로 사용할 예정
 
-  socket.on('data', onData(socket));
+  try {
+    socket.on('data', onData(socket));
+  } catch (e) {
+    console.error(e);
+  }
+
   socket.on('end', onEnd(socket));
   socket.on('error', onError(socket));
 };
